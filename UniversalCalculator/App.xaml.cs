@@ -18,6 +18,7 @@ namespace Calculator
 
 		protected override void OnLaunched(LaunchActivatedEventArgs e)
 		{
+
 			if (!(Window.Current.Content is Frame rootFrame))
 			{
 				rootFrame = new Frame();
@@ -30,7 +31,7 @@ namespace Calculator
 			if (e.PrelaunchActivated == false)
 			{
 				if (rootFrame.Content == null)
-					rootFrame.Navigate(typeof(MainPage), e.Arguments);
+					rootFrame.Navigate(typeof(MainMenu), e.Arguments);
 
 				Window.Current.Activate();
 			}
