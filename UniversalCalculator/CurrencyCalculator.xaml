@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="Calculator.CurrencyCalculator"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Calculator"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid RowSpacing="10" Background="White">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="auto"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+		<TextBlock Grid.Row="0" Text="Currency Conversion Calculator" Foreground="Black" FontSize="60" HorizontalAlignment="Center" FontWeight="Bold"/>
+		<Grid Grid.Row="1" ColumnSpacing="40" Padding="20 0 20 0">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<TextBlock Grid.Row="0" Grid.Column="0" Text="Amount $" Foreground="Black" FontSize="50" HorizontalAlignment="Center"/>
+			<TextBlock Grid.Row="0" Grid.Column="1" Text="From" Foreground="Black" FontSize="50" HorizontalAlignment="Center"/>
+			<TextBlock Grid.Row="0" Grid.Column="2" Text="To" Foreground="Black" FontSize="50" HorizontalAlignment="Center"/>
+			<TextBox x:Name="AmountTextBox" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Stretch" Height="50"/>
+			<ComboBox x:Name="ConvertFromComboBox" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch">
+				<ComboBoxItem x:Name="FromUSD" Tag="USD" Content="USD - US Dollar" IsSelected="True"/>
+				<ComboBoxItem x:Name="FromEUR" Tag="EUR" Content="EUR - Euro"/>
+				<ComboBoxItem x:Name="FromGBP" Tag="GBP" Content="GBP - British Pound"/>
+				<ComboBoxItem x:Name="FromINR" Tag="INR" Content="INR - Indian Rupe"/>
+			</ComboBox>
+			<ComboBox x:Name="ConvertToComboBox" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Stretch">
+				<ComboBoxItem x:Name="ToUSD" Tag="USD" Content="USD - US Dollar" IsSelected="True"/>
+				<ComboBoxItem x:Name="ToEUR" Tag="EUR" Content="EUR - Euro"/>
+				<ComboBoxItem x:Name="ToGBP" Tag="GBP" Content="GBP - British Pound"/>
+				<ComboBoxItem x:Name="ToINR" Tag="INR" Content="INR - Indian Rupe"/>
+			</ComboBox>
+		</Grid>
+		<Grid Grid.Row="2" RowSpacing="40" Padding="50">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<TextBlock x:Name="AmountTexBlock" Grid.Row="0" Foreground="Black" FontSize="30"/>
+			<TextBlock x:Name="ResultTextBlock" Grid.Row="1" Foreground="Black" FontSize="50" FontWeight="Bold"/>
+			<TextBlock x:Name="CurrencyFromTextBlock" Grid.Row="2" Foreground="Black" FontSize="30"/>
+			<TextBlock x:Name="CurrencyToTextBlock" Grid.Row="3" Foreground="Black" FontSize="30"/>
+		</Grid>
+		<Button Grid.Row="3" Content="Currency conversion" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Click="ConvertButtonHandler" Height="auto" Background="Gray"/>
+		<Button Grid.Row="4" Content="Exit" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Click="ExitButtonHandler" Height="auto" Background="Gray"/>
+	</Grid>
+</Page>
