@@ -8,7 +8,7 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid RowSpacing="20">
+    <Grid RowSpacing="10" Background="White">
 		<Grid.RowDefinitions>
 			<RowDefinition Height="auto"/>
 			<RowDefinition Height="auto"/>
@@ -51,12 +51,12 @@
 				<RowDefinition Height="*"/>
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
-			<TextBlock x:Name="AmountTexBlock" Grid.Row="0" Foreground="Black" FontSize="30" Text="Test"/>
-			<TextBlock x:Name="ResultTextBlock" Grid.Row="1" Foreground="Black" FontSize="50" Text="Test" FontWeight="Bold"/>
-			<TextBlock x:Name="CurrencyFromTextBlock" Grid.Row="2" Foreground="Black" FontSize="30" Text="Test"/>
-			<TextBlock x:Name="CurrencyToTextBlock" Grid.Row="3" Foreground="Black" FontSize="30" Text="Test"/>
+			<TextBlock x:Name="AmountTexBlock" Grid.Row="0" Foreground="Black" FontSize="30"/>
+			<TextBlock x:Name="ResultTextBlock" Grid.Row="1" Foreground="Black" FontSize="50" FontWeight="Bold"/>
+			<TextBlock x:Name="CurrencyFromTextBlock" Grid.Row="2" Foreground="Black" FontSize="30"/>
+			<TextBlock x:Name="CurrencyToTextBlock" Grid.Row="3" Foreground="Black" FontSize="30"/>
 		</Grid>
-		<Button Grid.Row="3" Content="Currency conversion" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Click="ConvertButtonHandler"/>
-		<Button Grid.Row="4" Content="Exit" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Click="ExitButtonHandler"/>
+		<Button Grid.Row="3" Content="Currency conversion" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" Click="ConvertButtonHandler" Height="auto" Background="Gray"/>
+		<Button Grid.Row="4" Content="Exit" HorizontalAlignment="Center" FontSize="30" FontWeight="Bold" VerticalAlignment="Top" Click="ExitButtonHandler" Height="auto" Background="Gray"/>
 	</Grid>
 </Page>
