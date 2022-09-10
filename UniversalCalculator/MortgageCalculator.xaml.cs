@@ -40,5 +40,15 @@ namespace Calculator
 			MonthlyInterestRateTextBox.Text = monthlyInterestRate.ToString();
 			MonthlyRepaimentTextBox.Text = result.ToString();
 		}
+
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="sender">Reference to the object that raised the event</param>
+		/// <param name="e">Event data</param>
+		private void ExitButtonHandler(object sender, RoutedEventArgs e)
+		{
+			MainMenu.currentView.Content = new MainMenu();
+		}
 	}
 }

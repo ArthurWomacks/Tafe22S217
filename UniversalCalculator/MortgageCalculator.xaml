@@ -58,6 +58,6 @@
 			<TextBox x:Name="MonthlyRepaimentTextBox" Grid.Row="5" Grid.Column="1" Width="400" HorizontalAlignment="Left" Style="{StaticResource StandardTextBox}"/>
 		</Grid>
 		<Button Grid.Row="2" Content="Calculate" HorizontalAlignment="Center" Width="200" Height="100" Background="Gray" Foreground="Black" FontSize="40" FontWeight="Bold" Click="CalculateInputData"/>
-		<Button Grid.Row="3" Content="Exit" HorizontalAlignment="Center" Width="auto" Height="auto" Background="Gray" Foreground="Black" FontSize="40" FontWeight="Bold"/>
+		<Button Grid.Row="3" Content="Exit" HorizontalAlignment="Center" Width="auto" Height="auto" Background="Gray" Foreground="Black" FontSize="40" FontWeight="Bold" Click="ExitButtonHandler"/>
 	</Grid>
 </Page>
