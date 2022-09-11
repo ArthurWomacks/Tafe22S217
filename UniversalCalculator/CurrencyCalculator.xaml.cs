@@ -150,9 +150,14 @@ namespace Calculator
 			return true;
 		}
 
+		/// <summary>
+		///		Transfers the user to MainMenu page
+		/// </summary>
+		/// <param name="sender">Reference to the object that raised the event</param>
+		/// <param name="e">Event data</param>
 		private void ExitButtonHandler(object sender, RoutedEventArgs e)
 		{
-
+			MainMenu.currentView.Content = new MainMenu();
 		}
 	}
 }
